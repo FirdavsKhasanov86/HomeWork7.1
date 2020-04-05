@@ -12,16 +12,16 @@ namespace HomeWork7._1
 
     class Converter
     {
-        public double converter{get;set;}
+        
         public double usd{get;set;}
         public double eur{get;set;}
         public double rub{get;set;}
 
         public Converter(){
-            
+
         }
-        public Converter(double converter, double usd, double eur, double rub){
-            this.converter = converter;
+        public Converter( double usd, double eur, double rub){
+            
             this.usd = usd;
             this.eur = eur;
             this.rub = rub;
