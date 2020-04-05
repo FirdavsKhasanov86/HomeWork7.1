@@ -9,4 +9,12 @@ namespace HomeWork7._1
            
         }
     }
+
+    class Converter
+    {
+        public double converter{get;set;}
+        public double usd{get;set;}
+        public double eur{get;set;}
+        public double rub{get;set;}
+    }
 }
