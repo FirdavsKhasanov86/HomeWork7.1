@@ -76,6 +76,14 @@ namespace HomeWork7._1
             // if(ruble>0){
             // con.ConverRubToSomoni(ruble);
             // }
+          
+          //-----------------------------------------------------------------//
+            //Задание 3.
+            
+            Employee em = new Employee();
+            em.UserEmployee("Mirzoev","Amin","Accountent", 2, 3000, 0.14);
+            em.UserEmployee("Bahriev","Shahzod","Lawyer", 3, 3500, 0.14);
+            em.UserEmployee("Payrav","Uldashev","Genaral Director", 10, 10000, 0.14);
 
         }
     }
@@ -131,7 +139,42 @@ namespace HomeWork7._1
     //     }
 
     // }
- 
+
+     //----------------------------------------------------------------------//
+            //Задание 3.
+
+        class Employee
+        {
+            public string name{get;set;}
+            public string sureName{get;set;}
+            public string occupation {get;set;}
+            public int experience{get;set;}
+
+            public Employee(){
+
+            }
+            public Employee(string name, string sureName ){
+                this.name = name;
+                this.sureName = sureName;
+            }
+
+            public void UserEmployee(string name, string sureName, string occupation,int experience, double salary, double tax){
+                Console.WriteLine("------------------------------------------------");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"Name:{name}");
+                Console.WriteLine($"SureName:{sureName}");
+                Console.WriteLine($"Occupation:{occupation}");
+                Console.WriteLine($"Experience:{experience} years");
+                Console.WriteLine($"Salary:{salary} somoni withot tax");
+                double SalaryBeforeTax = salary * tax;
+                double SalaryAfterTax = salary - SalaryBeforeTax;
+                Console.WriteLine($"Salary after tax:{(SalaryAfterTax)} somoni");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("------------------------------------------------");
+            }
+
+        }
+
    
    
 }
